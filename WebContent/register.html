@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="span3" ng-app="myApp" ng-controller="UserController as ctrl" class="ng-scope">
+    <h2>Sign Up</h2>
+    <form ng-submit="ctrl.submit()" method="post">
+    <label>First Name</label>
+    <input type="text" name="firstName" data-ng-model="ctrl.user.firstName" class="span3">
+    <label>Last Name</label>
+    <input type="text" name="lastName" data-ng-model="ctrl.user.lastName" class="span3">
+    <label>Email Address</label>
+    <input type="email" name="emailId" data-ng-model="ctrl.user.emailId" class="span3">
+    <label>Username</label>
+    <input type="text" name="userName" data-ng-model="ctrl.user.userName" class="span3">
+    <label>Password</label>
+    <input type="password" name="password" data-ng-model="ctrl.user.password" class="span3">
+ Pick a Role:
+  <input type="radio" data-ng-model="ctrl.user.role" value="Alumini">Alumini
+  <input type="radio" data-ng-model="ctrl.user.role" value="Students">Students
+  <input type="radio" data-ng-model="ctrl.user.role" value="Employee">Employee   
+  <input type="submit" value="Sign up" class="btn btn-primary pull-right">
+    <div class="clearfix"></div>
+    </form>
+    
+    
+</div>
+</body>
+<script type="text/javascript" src="UserController.js"></script>
+<script type="text/javascript" src="UserService.js"></script>
+</html>
